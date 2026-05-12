@@ -95,11 +95,6 @@ A React Native application for managing grocery shopping lists, built with Expo 
 - `server/`: Cloudflare Worker backend
 - `preview/`: Screenshots and previews
 
-## Screenshots
-
-![Screenshot 1](./client/preview/1.jpg)
-![Screenshot 2](./client/preview/2.jpg)
-![Screenshot 3](./client/preview/3.jpg)
 
 ## Technologies Used
 
