@@ -91,55 +91,58 @@ A React Native application for managing grocery shopping lists, built with Expo 
 
 ## Project Structure
 
+```
 GroceryApp/
 ├── client/
-│ ├── app/
-│ │ ├── (auth)/
-│ │ │ ├── index.tsx # Sign-in and auth flow
-│ │ │ ├── resetPassword.tsx # Password recovery screen
-│ │ │ └── signUp.tsx # User registration screen
-│ │ ├── (index)/
-│ │ │ ├── index.tsx # Main app home screen
-│ │ │ ├── profile.tsx # User profile screen
-│ │ │ ├── colorPicker.tsx # List color selection
-│ │ │ ├── emojiPicker.tsx # Emoji selection
-│ │ │ └── list/
-│ │ │ ├── [listId]/
-│ │ │ │ ├── index.tsx # Shopping list details
-│ │ │ │ ├── product/
-│ │ │ │ │ ├── [productId].tsx # Product detail/edit
-│ │ │ │ │ ├── edit.tsx # Edit product form
-│ │ │ │ │ └── new.tsx # Add new product
-│ │ │ │ └── share.tsx # Share list screen
-│ │ │ └── new/
-│ │ │ ├── create.tsx # Create new list flow
-│ │ │ └── scan.tsx # Scan product with camera
-│ │ └── \_layout.tsx # Root layout for Expo Router
-│ ├── assets/
-│ │ └── images/ # Icons and app images
-│ ├── component/ # Reusable UI components
-│ ├── context/ # App context providers and hooks
-│ ├── hooks/ # Custom React hooks
-│ ├── stores/ # Persistence and sync stores
-│ ├── utils/ # Utility helpers
-│ ├── preview/ # Demo screenshots
-│ ├── app.json # Expo configuration
-│ ├── babel.config.js # Babel config for Expo/NativeWind
-│ ├── tsconfig.json # TypeScript setup
-│ ├── tailwind.config.js # Tailwind CSS config
-│ ├── metro.config.js # Metro bundler config
-│ ├── eslint.config.js # ESLint rules
-│ ├── global.css # Global web styles
-│ └── package.json # Client dependencies and scripts
+│   ├── app/
+│   │   ├── (auth)/
+│   │   │   ├── index.tsx           # Sign-in and auth flow
+│   │   │   ├── resetPassword.tsx   # Password recovery screen
+│   │   │   └── signUp.tsx          # User registration screen
+│   │   ├── (index)/
+│   │   │   ├── index.tsx           # Main app home screen
+│   │   │   ├── profile.tsx         # User profile screen
+│   │   │   ├── colorPicker.tsx     # List color selection
+│   │   │   ├── emojiPicker.tsx     # Emoji selection
+│   │   │   ├── list/
+│   │   │   │   ├── [listId]/
+│   │   │   │   │   ├── index.tsx    # Shopping list details
+│   │   │   │   │   ├── product/
+│   │   │   │   │   │   ├── [productId].tsx  # Product detail/edit
+│   │   │   │   │   │   ├── edit.tsx          # Edit product form
+│   │   │   │   │   │   └── new.tsx           # Add new product
+│   │   │   │   │   └── share.tsx             # Share list screen
+│   │   │   │   └── new/
+│   │   │   │       ├── create.tsx           # Create new list flow
+│   │   │   │       └── scan.tsx             # Scan product with camera
+│   │   │   └── _layout.tsx                  # Root layout for Expo Router
+│   ├── assets/
+│   │   └── images/                         # Icons and app images
+│   ├── component/                          # Reusable UI components
+│   ├── context/                            # App context providers and hooks
+│   ├── hooks/                              # Custom React hooks
+│   ├── stores/                             # Persistence and sync stores
+│   ├── utils/                              # Utility helpers
+│   ├── preview/                            # Demo screenshots
+│   ├── app.json                            # Expo configuration
+│   ├── babel.config.js                     # Babel config for Expo/NativeWind
+│   ├── tsconfig.json                       # TypeScript setup
+│   ├── tailwind.config.js                  # Tailwind CSS config
+│   ├── metro.config.js                     # Metro bundler config
+│   ├── eslint.config.js                    # ESLint rules
+│   ├── global.css                          # Global web styles
+│   └── package.json                        # Client dependencies and scripts
 ├── server/
-│ ├── src/
-│ │ └── index.ts # Cloudflare Worker entry point
-│ ├── package.json # Server dependencies and scripts
-│ ├── tsconfig.json # TypeScript setup for server
-│ ├── wrangler.jsonc # Cloudflare Workers config
-│ └── vitest.config.mts # Test config
-├── preview/ # App screenshots
-└── README.md # Project documentation
+│   ├── src/
+│   │   └── index.ts                        # Cloudflare Worker entry point
+│   ├── package.json                        # Server dependencies and scripts
+│   ├── tsconfig.json                       # TypeScript setup for server
+│   ├── wrangler.jsonc                       # Cloudflare Workers config
+│   └── vitest.config.mts                   # Test config
+├── preview/                                # App screenshots
+├── .gitignore                              # Files to ignore in git
+└── README.md                               # Project documentation
+```
 
 ## Key File Descriptions
 
