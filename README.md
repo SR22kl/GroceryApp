@@ -138,7 +138,8 @@ GroceryApp/
 │ ├── tsconfig.json # TypeScript setup for server
 │ ├── wrangler.jsonc # Cloudflare Workers config
 │ └── vitest.config.mts # Test config
-├── README.md # Project documentation
+├── preview/ # App screenshots
+└── README.md # Project documentation
 
 ## Key File Descriptions
 
