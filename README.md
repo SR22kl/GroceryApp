@@ -2,6 +2,8 @@
 
 A React Native application for managing grocery shopping lists, built with Expo and featuring user authentication, list sharing, and product management.
 
+![GrocyGo Demo](./client/preview/1.jpg)
+
 ## Features
 
 - User authentication with Clerk
