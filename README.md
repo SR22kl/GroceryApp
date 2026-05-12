@@ -92,9 +92,49 @@ A React Native application for managing grocery shopping lists, built with Expo 
 ## Project Structure
 
 - `client/`: React Native Expo app
-- `server/`: Cloudflare Worker backend
-- `preview/`: Screenshots and previews
+  - `app/`: Expo Router screens and routes
+  - `assets/`: images, icons, and static resources
+  - `component/`: reusable UI components
+  - `context/`: app context providers and hooks
+  - `hooks/`: custom React hooks
+  - `stores/`: persistence and sync stores
+  - `utils/`: shared utilities and helpers
+- `server/`: Cloudflare Worker backend and API logic
+- `preview/`: app demo screenshots
 
+## Key File Descriptions
+
+- `client/app.json`: Expo app configuration, icons, and platform settings.
+- `client/babel.config.js`: Babel configuration for Expo and nativewind.
+- `client/tsconfig.json`: TypeScript configuration for the client app.
+- `client/app/_layout.tsx`: Main layout for Expo Router navigation.
+- `client/app/(auth)/index.tsx`: Authentication landing and sign-in logic.
+- `client/app/(index)/index.tsx`: Main app home screen and navigation entry.
+- `client/component/`: Custom UI components used across the app.
+- `client/stores/ShoppingListsStore.tsx`: Shopping list persistence store.
+- `client/stores/ShoppingListStore.tsx`: Individual shopping list state management.
+- `server/package.json`: Server dependency and script definitions.
+- `server/src/index.ts`: Entry point for the Cloudflare Worker backend.
+- `preview/1.jpg`, `preview/2.jpg`, `preview/3.jpg`: App demo screenshots used in this README.
+
+## How to Use the App
+
+1. Open the app and sign in using Clerk authentication.
+2. Create a new shopping list from the main list screen.
+3. Add products to the list using the product form or camera scanner.
+4. Customize each list with colors and emojis.
+5. Share a list with others using the share action on a list page.
+6. View and edit products by selecting a product inside any shopping list.
+
+## Development Guide
+
+- Use `npm install` inside both `client/` and `server/` to install dependencies.
+- Start development with `npm start` in `client/` and `npm run dev` in `server/`.
+- Edit UI and navigation inside `client/app/`.
+- Add reusable components to `client/component/` and helper functions to `client/utils/`.
+- Manage app state and persistence in `client/stores/` and `client/context/`.
+- Run Expo in web mode with `npm run web` from `client/`.
+- Use the `client/.eslintrc` and `babel.config.js` configuration if linting or build issues appear.
 
 ## Technologies Used
 
