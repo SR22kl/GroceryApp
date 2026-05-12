@@ -91,16 +91,54 @@ A React Native application for managing grocery shopping lists, built with Expo 
 
 ## Project Structure
 
-- `client/`: React Native Expo app
-  - `app/`: Expo Router screens and routes
-  - `assets/`: images, icons, and static resources
-  - `component/`: reusable UI components
-  - `context/`: app context providers and hooks
-  - `hooks/`: custom React hooks
-  - `stores/`: persistence and sync stores
-  - `utils/`: shared utilities and helpers
-- `server/`: Cloudflare Worker backend and API logic
-- `preview/`: app demo screenshots
+GroceryApp/
+├── client/
+│ ├── app/
+│ │ ├── (auth)/
+│ │ │ ├── index.tsx # Sign-in and auth flow
+│ │ │ ├── resetPassword.tsx # Password recovery screen
+│ │ │ └── signUp.tsx # User registration screen
+│ │ ├── (index)/
+│ │ │ ├── index.tsx # Main app home screen
+│ │ │ ├── profile.tsx # User profile screen
+│ │ │ ├── colorPicker.tsx # List color selection
+│ │ │ ├── emojiPicker.tsx # Emoji selection
+│ │ │ └── list/
+│ │ │ ├── [listId]/
+│ │ │ │ ├── index.tsx # Shopping list details
+│ │ │ │ ├── product/
+│ │ │ │ │ ├── [productId].tsx # Product detail/edit
+│ │ │ │ │ ├── edit.tsx # Edit product form
+│ │ │ │ │ └── new.tsx # Add new product
+│ │ │ │ └── share.tsx # Share list screen
+│ │ │ └── new/
+│ │ │ ├── create.tsx # Create new list flow
+│ │ │ └── scan.tsx # Scan product with camera
+│ │ └── \_layout.tsx # Root layout for Expo Router
+│ ├── assets/
+│ │ └── images/ # Icons and app images
+│ ├── component/ # Reusable UI components
+│ ├── context/ # App context providers and hooks
+│ ├── hooks/ # Custom React hooks
+│ ├── stores/ # Persistence and sync stores
+│ ├── utils/ # Utility helpers
+│ ├── preview/ # Demo screenshots
+│ ├── app.json # Expo configuration
+│ ├── babel.config.js # Babel config for Expo/NativeWind
+│ ├── tsconfig.json # TypeScript setup
+│ ├── tailwind.config.js # Tailwind CSS config
+│ ├── metro.config.js # Metro bundler config
+│ ├── eslint.config.js # ESLint rules
+│ ├── global.css # Global web styles
+│ └── package.json # Client dependencies and scripts
+├── server/
+│ ├── src/
+│ │ └── index.ts # Cloudflare Worker entry point
+│ ├── package.json # Server dependencies and scripts
+│ ├── tsconfig.json # TypeScript setup for server
+│ ├── wrangler.jsonc # Cloudflare Workers config
+│ └── vitest.config.mts # Test config
+├── README.md # Project documentation
 
 ## Key File Descriptions
 
@@ -115,7 +153,7 @@ A React Native application for managing grocery shopping lists, built with Expo 
 - `client/stores/ShoppingListStore.tsx`: Individual shopping list state management.
 - `server/package.json`: Server dependency and script definitions.
 - `server/src/index.ts`: Entry point for the Cloudflare Worker backend.
-- `preview/1.jpg`, `preview/2.jpg`, `preview/3.jpg`: App demo screenshots used in this README.
+- `client/preview/1.jpg`, `client/preview/2.jpg`, `client/preview/3.jpg`: App demo screenshots used in this README.
 
 ## How to Use the App
 
